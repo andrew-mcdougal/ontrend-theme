@@ -1,7 +1,7 @@
 /* Import hamburgers */
 @import "../_sass/hamburgers/hamburgers.scss";
 
-
+@import "variables.scss";
 
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css?family=Lato');
@@ -40,6 +40,10 @@ After that as width grows and changes need to happen, media queries are introduc
 	.hamburger-inner:before,
 	.hamburger-inner:after {
 		background-color: #FFF;
+	}
+
+	.hamburger--stand.is-active .hamburger-inner {
+		background-color: transparent;
 	}
 
 

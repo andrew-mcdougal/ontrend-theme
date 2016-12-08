@@ -622,5 +622,7 @@ After that as width grows and changes need to happen, media queries are introduc
   #ontrend .header .hamburger-inner:before,
   #ontrend .header .hamburger-inner:after {
     background-color: #FFF; }
+  #ontrend .header .hamburger--stand.is-active .hamburger-inner {
+    background-color: transparent; }
 
 /*# sourceMappingURL=ontrend.css.map */
