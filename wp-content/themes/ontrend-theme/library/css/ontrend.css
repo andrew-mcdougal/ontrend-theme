@@ -618,5 +618,9 @@ After that as width grows and changes need to happen, media queries are introduc
 /* 2. Header */
 #ontrend .header {
   background: #000; }
+  #ontrend .header .hamburger-inner,
+  #ontrend .header .hamburger-inner:before,
+  #ontrend .header .hamburger-inner:after {
+    background-color: #FFF; }
 
 /*# sourceMappingURL=ontrend.css.map */
