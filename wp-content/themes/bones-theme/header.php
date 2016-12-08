@@ -40,7 +40,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<body id="ontrend" <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 
 		<div id="container">
 
@@ -48,8 +48,15 @@
 
 				<div id="inner-header" class="wrap cf">
 
+					<button class="hamburger hamburger--stand" type="button">
+					  <span class="hamburger-box">
+					    <span class="hamburger-inner"></span>
+					  </span>
+					  <div class="hamburger-extra"></div>
+					</button>
+
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					<a href="<?php echo home_url(); ?>" rel="nofollow"><?php get_template_part('svg/inline', 'logo-large.svg'); ?></a>
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
@@ -71,6 +78,7 @@
 						)); ?>
 
 					</nav>
+
 
 				</div>
 
