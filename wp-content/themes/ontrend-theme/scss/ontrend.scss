@@ -1,0 +1,38 @@
+/* Import hamburgers */
+@import "../_sass/hamburgers/hamburgers.scss";
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
+
+/***************
+/***************
+
+This theme is built mobile first so the code starts off with view in mobile size (320px wide).
+
+After that as width grows and changes need to happen, media queries are introduced.
+
+1. Layout (fonts, margins, padding, colors, etc. for content area)
+
+2. Header
+
+/***************
+/***************/
+
+/* 1. Layout */
+#ontrend {
+	font-family: 'Open Sans', sans-serif;
+	background: #000;
+}
+
+
+
+/* 2. Header */
+#ontrend .header {
+	background: #000;
+
+}
+
