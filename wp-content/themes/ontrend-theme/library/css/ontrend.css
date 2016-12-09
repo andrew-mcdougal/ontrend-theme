@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Import hamburgers */
 /*!
  * Hamburgers
@@ -596,6 +597,153 @@
     bottom: 0;
     transform: rotate(-90deg); }
 
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  width: 100%;
+  /*max-width: 960px;*/
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 100%;
+    padding: 0; } }
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 100%; }
+
+  .column,
+  .columns {
+    margin-left: 4%; }
+
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns {
+    width: 4.66666666667%; }
+
+  .two.columns {
+    width: 13.3333333333%; }
+
+  .three.columns {
+    width: 22%; }
+
+  .four.columns {
+    width: 30.6666666667%; }
+
+  .five.columns {
+    width: 39.3333333333%; }
+
+  .six.columns {
+    width: 48%; }
+
+  .seven.columns {
+    width: 56.6666666667%; }
+
+  .eight.columns {
+    width: 65.3333333333%; }
+
+  .nine.columns {
+    width: 74.0%; }
+
+  .ten.columns {
+    width: 82.6666666667%; }
+
+  .eleven.columns {
+    width: 91.3333333333%; }
+
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0; }
+
+  .one-third.column {
+    width: 30.6666666667%; }
+
+  .two-thirds.column {
+    width: 65.3333333333%; }
+
+  .one-half.column {
+    width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns {
+    margin-left: 8.66666666667%; }
+
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    margin-left: 17.3333333333%; }
+
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    margin-left: 26%; }
+
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    margin-left: 34.6666666667%; }
+
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    margin-left: 43.3333333333%; }
+
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    margin-left: 52%; }
+
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    margin-left: 60.6666666667%; }
+
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    margin-left: 69.3333333333%; }
+
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    margin-left: 78.0%; }
+
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    margin-left: 86.6666666667%; }
+
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    margin-left: 34.6666666667%; }
+
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns {
+    margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns {
+    margin-left: 52%; } }
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* Import fonts */
 /***************
 /***************
@@ -608,21 +756,122 @@ After that as width grows and changes need to happen, media queries are introduc
 
 2. Header
 
+3. Header Nav
+
 /***************
 /***************/
 /* 1. Layout */
 #ontrend {
   font-family: 'Open Sans', sans-serif;
-  background: #000; }
+  background: #000000; }
+  #ontrend .wrap {
+    width: 100%; }
+  #ontrend #content {
+    margin-top: 53px; }
 
 /* 2. Header */
 #ontrend .header {
-  background: #000; }
-  #ontrend .header .hamburger-inner,
-  #ontrend .header .hamburger-inner:before,
-  #ontrend .header .hamburger-inner:after {
-    background-color: #FFF; }
+  background: black;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  /* Header grid */
+  /* Hamburger menu */
+  /* Header logo */ }
+  #ontrend .header #inner-header {
+    line-height: 0; }
+  #ontrend .header a {
+    text-decoration: none; }
+  #ontrend .header .header-two-column {
+    width: 20%; }
+  #ontrend .header .header-eight-column {
+    width: 60%; }
+  #ontrend .header .hamburger {
+    padding: 15px 10px 10px;
+    vertical-align: top; }
+    #ontrend .header .hamburger .hamburger-box {
+      width: 20px; }
+    #ontrend .header .hamburger .hamburger-inner,
+    #ontrend .header .hamburger .hamburger-inner:before,
+    #ontrend .header .hamburger .hamburger-inner:after {
+      background-color: #FFFFFF;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      width: 20px;
+      height: 2px; }
+  #ontrend .header .hamburger-inner::before {
+    top: -5px; }
+  #ontrend .header .hamburger-inner::after {
+    bottom: -5px; }
   #ontrend .header .hamburger--stand.is-active .hamburger-inner {
     background-color: transparent; }
+  #ontrend .header .hamburger--stand.is-active .hamburger-inner::before {
+    top: 0px; }
+  #ontrend .header .hamburger--stand.is-active .hamburger-inner::after {
+    bottom: 0px; }
+  #ontrend .header .header-logo {
+    font-size: 0; }
+    #ontrend .header .header-logo svg {
+      padding: 0 24px 0 0;
+      width: 60%;
+      height: auto; }
+  #ontrend .header .header-phone {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    background: rgba(255, 255, 255, 0.2);
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+    font-size: 1.3em;
+    color: #FFFFFF;
+    padding: 15px;
+    margin: 10px 0 0 0;
+    position: relative;
+    border: 2px solid #FFFFFF;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    #ontrend .header .header-phone i {
+      position: absolute;
+      top: 5px;
+      left: 7px; }
+    #ontrend .header .header-phone:hover {
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg);
+      background-color: green; }
+
+/* 3. Header navigation */
+#ontrend .header .header-nav {
+  position: absolute;
+  top: -100vh;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  text-align: center; }
+#ontrend .header .nav-active {
+  top: 53px;
+  z-index: 100; }
+#ontrend .header .header-nav #menu-main {
+  margin-top: 2em;
+  opacity: 0; }
+  #ontrend .header .header-nav #menu-main li a {
+    padding: 30px 20px;
+    text-transform: uppercase;
+    font-size: 1.5em; }
+    #ontrend .header .header-nav #menu-main li a:hover {
+      color: #F8971D; }
 
 /*# sourceMappingURL=ontrend.css.map */
