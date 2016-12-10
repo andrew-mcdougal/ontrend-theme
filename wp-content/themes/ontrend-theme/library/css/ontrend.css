@@ -758,16 +758,20 @@ After that as width grows and changes need to happen, media queries are introduc
 
 3. Header Nav
 
+4. Home page
+
 /***************
 /***************/
 /* 1. Layout */
 #ontrend {
   font-family: 'Open Sans', sans-serif;
-  background: #000000; }
+  background: #000000;
+  font-size: 16px; }
   #ontrend .wrap {
     width: 100%; }
   #ontrend #content {
-    margin-top: 53px; }
+    margin-top: 53px;
+    background: #FFFFFF; }
 
 /* 2. Header */
 #ontrend .header {
@@ -873,5 +877,18 @@ After that as width grows and changes need to happen, media queries are introduc
     font-size: 1.5em; }
     #ontrend .header .header-nav #menu-main li a:hover {
       color: #F8971D; }
+
+/* 4. Home page */
+.home-page .home-hero {
+  position: relative;
+  width: 100%; }
+  .home-page .home-hero img {
+    width: 100%;
+    height: auto; }
+.home-page .entry-content p {
+  color: #000000;
+  text-align: center;
+  font-size: 1.3em;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=ontrend.css.map */

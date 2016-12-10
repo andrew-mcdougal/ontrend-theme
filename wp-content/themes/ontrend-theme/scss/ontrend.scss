@@ -25,6 +25,8 @@ After that as width grows and changes need to happen, media queries are introduc
 
 3. Header Nav
 
+4. Home page
+
 /***************
 /***************/
 
@@ -32,6 +34,7 @@ After that as width grows and changes need to happen, media queries are introduc
 #ontrend {
 	font-family: 'Open Sans', sans-serif;
 	background: $black;
+	font-size: 16px;
 
 	.wrap {
 		width: 100%;
@@ -39,6 +42,7 @@ After that as width grows and changes need to happen, media queries are introduc
 
 	#content {
 		margin-top: 53px;
+		background: $white;
 	}
 }
 
@@ -193,7 +197,26 @@ After that as width grows and changes need to happen, media queries are introduc
 }
 	
 
+/* 4. Home page */
+.home-page {
 
+	.home-hero {
+		position: relative;
+		width: 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.entry-content p {
+		color: $black;
+		text-align: center;
+		font-size: 1.3em;
+		text-transform: uppercase;
+	}
+}
 
 
 
