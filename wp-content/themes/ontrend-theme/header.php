@@ -48,21 +48,25 @@
 
 				<div id="inner-header" class="wrap cf">
 
-					<button class="hamburger hamburger--stand" type="button">
+					<!-- Left column Hamburger nav -->
+					<button class="header-two-column hamburger hamburger--stand" type="button">
 					  <span class="hamburger-box">
 					    <span class="hamburger-inner"></span>
 					  </span>
 					  <div class="hamburger-extra"></div>
 					</button>
 
+					<!-- Center column Logo -->
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<a href="<?php echo home_url(); ?>" rel="nofollow"><?php get_template_part('svg/inline', 'logo-large.svg'); ?></a>
+					<a class="header-eight-column header-logo" href="<?php echo home_url(); ?>" rel="nofollow">
+						<?php get_template_part('svg/inline', 'logo-large.svg'); ?>
+					</a>
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+					<!-- Right column Phone icon -->
+					<a class="header-two-column header-phone" href="javascript:void(0)"><i class="fa fa-phone"></i></a>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="header-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
