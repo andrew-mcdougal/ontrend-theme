@@ -37,6 +37,15 @@
 								</header>
 
 								<section class="entry-content cf" itemprop="articleBody">
+									<?php 
+
+									$image = get_field('main_image');
+
+									if( !empty($image) ): ?>
+
+										<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+									<?php endif; ?>
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
