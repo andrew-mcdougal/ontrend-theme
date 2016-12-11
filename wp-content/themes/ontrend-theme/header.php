@@ -31,6 +31,16 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+		<!-- Custom footer background colour -->
+		<style>
+			#ontrend .footer {
+				background-color: <?php the_field('background_color', 'option'); ?>;
+				background-image: url("<?php the_field('background_image', 'option'); ?>");
+				background-size: 32px auto;
+			}
+		</style>
+		
+
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>

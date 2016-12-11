@@ -1411,7 +1411,7 @@ POSTS & CONTENT STYLES
 #content {
   margin-top: 1.5em; }
 
-.hentry {
+/*.hentry {
   background-color: white;
   border-radius: 3px;
   margin-bottom: 1.5em;
@@ -1424,7 +1424,7 @@ POSTS & CONTENT STYLES
     border-top: 1px solid #f8f9fa; }
     .hentry footer p {
       margin: 0; }
-
+*/
 /* end .hentry */
 .single-title,
 .page-title,
