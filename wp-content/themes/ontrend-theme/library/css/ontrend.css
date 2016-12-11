@@ -597,6 +597,11 @@
     bottom: 0;
     transform: rotate(-90deg); }
 
+/* Flex */
+.flexbox, .footer #inner-footer .footer-nav {
+  display: -webkit-flex;
+  display: flex; }
+
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
@@ -760,13 +765,16 @@ After that as width grows and changes need to happen, media queries are introduc
 
 4. Home page
 
+5. Footer
+
 /***************
 /***************/
 /* 1. Layout */
 #ontrend {
   font-family: 'Open Sans', sans-serif;
   background: #000000;
-  font-size: 16px; }
+  font-size: 16px;
+  line-height: 140%; }
   #ontrend .wrap {
     width: 100%; }
   #ontrend #content {
@@ -854,7 +862,7 @@ After that as width grows and changes need to happen, media queries are introduc
       -ms-transform: rotate(135deg);
       -o-transform: rotate(135deg);
       transform: rotate(135deg);
-      background-color: green; }
+      background-color: #5bc236; }
 
 /* 3. Header navigation */
 #ontrend .header .header-nav {
@@ -863,7 +871,7 @@ After that as width grows and changes need to happen, media queries are introduc
   z-index: -1;
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background-color: #000000;
   text-align: center; }
 #ontrend .header .nav-active {
   top: 53px;
@@ -890,5 +898,40 @@ After that as width grows and changes need to happen, media queries are introduc
   text-align: center;
   font-size: 1.3em;
   text-transform: uppercase; }
+
+/* 5. Footer */
+.footer {
+  margin-bottom: 45px;
+  border-top: 2px solid #000000;
+  text-align: center; }
+  .footer #inner-footer .footer-nav {
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background: #db7d07;
+    border-top: 1px solid #db7d07; }
+    .footer #inner-footer .footer-nav a {
+      text-align: center;
+      width: 20%;
+      padding: 5px;
+      color: #FFFFFF;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.6em; }
+    .footer #inner-footer .footer-nav .fa {
+      display: block;
+      color: #FFFFFF;
+      font-size: 20px; }
+  .footer #inner-footer p {
+    color: #000000;
+    margin: 0.5em 0 0.25em 0;
+    font-size: 0.9em; }
+  .footer #inner-footer .site-by {
+    margin: 0;
+    background: #000000;
+    color: #FFFFFF;
+    padding: 5px; }
 
 /*# sourceMappingURL=ontrend.css.map */

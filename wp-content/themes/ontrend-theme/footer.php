@@ -2,6 +2,34 @@
 
 				<div id="inner-footer" class="wrap cf">
 
+					<!-- Icon links for fixed positioning web app style -->
+					<div class="footer-nav mobile-first">
+						<a href="javascript:void(0);">
+							<i class="fa fa-home"></i>
+							Home
+						</a>
+						<a href="javascript:void(0);">
+							<i class="fa fa-cutlery"></i>
+							Menu
+						</a>
+						<a href="javascript:void(0);">
+							<i class="fa fa-image"></i>
+							Gallery
+						</a>
+						<a href="javascript:void(0);">
+							<i class="fa fa-map-marker"></i>
+							Map
+						</a>
+						<a href="javascript:void(0);">
+							<i class="fa fa-envelope"></i>
+							Contact
+						</a>
+					</div>
+
+					<!-- Address and Phone -->
+					<p><?php the_field('address', 'option'); ?></p>
+					<p><?php the_field('phone', 'option'); ?></p>
+
 					<nav role="navigation">
 						<?php wp_nav_menu(array(
     					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
@@ -19,6 +47,9 @@
 					</nav>
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+
+					<!-- Site by calling card -->
+					<p class="site-by">site by <a href="http://ontrendwebsites.com" title="onTrend websites - Mobile friendly WordPress design and development" target="_blank">onTrend websites</a></p>
 
 				</div>
 
