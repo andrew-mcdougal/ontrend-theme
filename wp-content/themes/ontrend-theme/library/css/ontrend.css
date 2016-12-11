@@ -775,7 +775,8 @@ After that as width grows and changes need to happen, media queries are introduc
   font-family: 'Open Sans', sans-serif;
   background: #000000;
   font-size: 16px;
-  line-height: 140%; }
+  line-height: 140%;
+  width: 100%; }
   #ontrend .wrap {
     width: 100%; }
   #ontrend #content {
@@ -787,8 +788,18 @@ After that as width grows and changes need to happen, media queries are introduc
   .mobile-only {
     display: none; }
 
-  #ontrend #content {
-    margin-top: 0; } }
+  #ontrend {
+    background: #FFFFFF; }
+    #ontrend .wrap {
+      max-width: 960px; }
+    #ontrend #content {
+      margin-top: 0; }
+      #ontrend #content #inner-content {
+        max-width: 960px;
+        margin-bottom: 2em; } }
+@media all and (min-width: 960px) {
+  #ontrend #content #inner-content {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); } }
 /* 2. Header */
 #ontrend .header {
   background: black;
@@ -873,11 +884,13 @@ After that as width grows and changes need to happen, media queries are introduc
 /* Responsive */
 @media all and (min-width: 768px) {
   #ontrend .header {
-    background: rgba(0, 0, 0, 0.6);
+    background: none;
     position: fixed;
     top: 0;
     z-index: 1000;
     width: 100%; }
+    #ontrend .header #inner-header {
+      background: rgba(0, 0, 0, 0.6); }
     #ontrend .header .header-logo svg rect {
       fill: transparent; }
     #ontrend .header .header-nav {
@@ -944,6 +957,9 @@ After that as width grows and changes need to happen, media queries are introduc
   text-transform: uppercase; }
 
 /* 5. Footer */
+#ontrend .footer #inner-footer {
+  max-width: none; }
+
 .footer {
   margin-bottom: 45px;
   border-top: 2px solid #000000;

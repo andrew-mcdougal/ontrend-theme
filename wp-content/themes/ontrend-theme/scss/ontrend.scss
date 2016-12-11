@@ -38,6 +38,7 @@ After that as width grows and changes need to happen, media queries are introduc
 	background: $black;
 	font-size: 16px;
 	line-height: 140%;
+	width: 100%;
 
 	.wrap {
 		width: 100%;
@@ -56,9 +57,31 @@ After that as width grows and changes need to happen, media queries are introduc
 	}
 
 	#ontrend {
+		background: $white;
+
+		.wrap {
+			max-width: 960px;
+		}
 
 		#content {
 			margin-top: 0;
+
+			#inner-content {
+				max-width: 960px;
+				margin-bottom: 2em;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 960px) {
+	#ontrend {
+
+		#content {
+
+			#inner-content {
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			}
 		}
 	}
 }
@@ -176,11 +199,15 @@ After that as width grows and changes need to happen, media queries are introduc
 /* Responsive */
 @media all and (min-width: $break-tablet) {
 	#ontrend .header {
-		background: rgba($black, 0.6);
+		background: none;
 		position: fixed;
 		top: 0;
 		z-index: 1000;
 		width: 100%;
+
+		#inner-header {
+			background: rgba($black, 0.6);
+		}
 
 		.header-logo {
 
@@ -305,6 +332,10 @@ After that as width grows and changes need to happen, media queries are introduc
 
 
 /* 5. Footer */
+#ontrend .footer #inner-footer {
+	max-width: none;
+}
+
 .footer {
 	margin-bottom: 45px;
 	border-top: 2px solid $black;
@@ -367,9 +398,6 @@ After that as width grows and changes need to happen, media queries are introduc
 		}
 	}
 }
-
-
-
 
 
 
