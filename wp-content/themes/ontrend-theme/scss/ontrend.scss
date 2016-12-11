@@ -49,6 +49,20 @@ After that as width grows and changes need to happen, media queries are introduc
 	}
 }
 
+/* Responsive */
+@media all and (min-width: $break-tablet) {
+	.mobile-only {
+		display: none;
+	}
+
+	#ontrend {
+
+		#content {
+			margin-top: 0;
+		}
+	}
+}
+
 
 
 /* 2. Header */
@@ -61,6 +75,11 @@ After that as width grows and changes need to happen, media queries are introduc
 
 	#inner-header {
 		line-height: 0;
+
+		.header-container {
+			@extend .flexbox;
+			justify-content: space-between;
+		}
 	}
 
 	a {
@@ -68,17 +87,11 @@ After that as width grows and changes need to happen, media queries are introduc
 	}
 
 	/* Header grid */
-	.header-two-column {
-		width: 20%;
-	}
-
-	.header-eight-column {
-		width: 60%;
-	}
+	
 
 	/* Hamburger menu */
 	.hamburger {
-		padding: 15px 10px 10px;
+		padding: 15px 10px 10px 15px;
 		vertical-align: top;
 
 		.hamburger-box {
@@ -124,8 +137,8 @@ After that as width grows and changes need to happen, media queries are introduc
 		font-size: 0;
 
 		svg {
-			padding: 0 24px 0 0;
-			width: 60%;
+			padding: 0;
+			width: 190px;
 			height: auto;
 		}	
 	}
@@ -142,7 +155,7 @@ After that as width grows and changes need to happen, media queries are introduc
 		font-size: 1.3em;
 		color: $white;
 		padding: 15px;
-		margin: 10px 0 0 0;
+		margin: 15px 15px 0 0;
 		position: relative;
 		border: 2px solid $white;
 		@include transition(all .3s ease);
@@ -159,6 +172,41 @@ After that as width grows and changes need to happen, media queries are introduc
 		}
 	}
 }
+
+/* Responsive */
+@media all and (min-width: $break-tablet) {
+	#ontrend .header {
+		background: rgba($black, 0.6);
+		position: fixed;
+		top: 0;
+		z-index: 1000;
+		width: 100%;
+
+		.header-logo {
+
+			svg {
+
+				rect {
+					fill: rgba($black, 0);
+				}
+			}
+		}
+
+		.header-nav {
+			position: relative;
+			top: 0;
+			z-index: 10;
+			width: auto;
+			height: auto;
+			background-color: $primary-orange;
+			text-align: center;
+		}
+	}
+}
+
+
+
+
 
 /* 3. Header navigation */
 #ontrend .header {
@@ -185,6 +233,10 @@ After that as width grows and changes need to happen, media queries are introduc
 
 			li {
 
+				@media all and (max-width: $break-tablet) {
+					float: none;
+				}
+
 				a {
 					padding: 30px 20px;
 					text-transform: uppercase;
@@ -192,6 +244,35 @@ After that as width grows and changes need to happen, media queries are introduc
 
 					&:hover {
 						color: $primary-orange;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Responsive */
+@media all and (min-width: $break-tablet) {
+	#ontrend .header {
+		.header-nav {
+			position: relative;
+			top: 0!important;
+			z-index: 10;
+			width: auto;
+			height: auto;
+			background: none;
+			text-align: center;
+
+			#menu-main {
+				opacity: 1!important;
+				visibility: visible!important;
+				margin-top: 15px;
+
+				li {
+
+					a {
+						font-size: 1em;
+						padding: 15px;
 					}
 				}
 			}
@@ -273,7 +354,19 @@ After that as width grows and changes need to happen, media queries are introduc
 	}
 }
 
+/* Responsive */
+@media all and (min-width: $break-tablet) {
+	.footer {
+		margin-bottom: 0;
 
+		#inner-footer {
+
+			.footer-nav {
+				position: relative;
+			}
+		}
+	}
+}
 
 
 

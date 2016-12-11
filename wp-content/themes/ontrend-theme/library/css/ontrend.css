@@ -598,10 +598,11 @@
     transform: rotate(-90deg); }
 
 /* Flex */
-.flexbox, .footer #inner-footer .footer-nav {
+.flexbox, #ontrend .header #inner-header .header-container, .footer #inner-footer .footer-nav {
   display: -webkit-flex;
   display: flex; }
 
+/* Media queries */
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
@@ -781,6 +782,13 @@ After that as width grows and changes need to happen, media queries are introduc
     margin-top: 53px;
     background: #FFFFFF; }
 
+/* Responsive */
+@media all and (min-width: 768px) {
+  .mobile-only {
+    display: none; }
+
+  #ontrend #content {
+    margin-top: 0; } }
 /* 2. Header */
 #ontrend .header {
   background: black;
@@ -793,14 +801,12 @@ After that as width grows and changes need to happen, media queries are introduc
   /* Header logo */ }
   #ontrend .header #inner-header {
     line-height: 0; }
+    #ontrend .header #inner-header .header-container {
+      justify-content: space-between; }
   #ontrend .header a {
     text-decoration: none; }
-  #ontrend .header .header-two-column {
-    width: 20%; }
-  #ontrend .header .header-eight-column {
-    width: 60%; }
   #ontrend .header .hamburger {
-    padding: 15px 10px 10px;
+    padding: 15px 10px 10px 15px;
     vertical-align: top; }
     #ontrend .header .hamburger .hamburger-box {
       width: 20px; }
@@ -827,8 +833,8 @@ After that as width grows and changes need to happen, media queries are introduc
   #ontrend .header .header-logo {
     font-size: 0; }
     #ontrend .header .header-logo svg {
-      padding: 0 24px 0 0;
-      width: 60%;
+      padding: 0;
+      width: 190px;
       height: auto; }
   #ontrend .header .header-phone {
     text-decoration: none;
@@ -844,7 +850,7 @@ After that as width grows and changes need to happen, media queries are introduc
     font-size: 1.3em;
     color: #FFFFFF;
     padding: 15px;
-    margin: 10px 0 0 0;
+    margin: 15px 15px 0 0;
     position: relative;
     border: 2px solid #FFFFFF;
     -webkit-transition: all 0.3s ease;
@@ -864,6 +870,24 @@ After that as width grows and changes need to happen, media queries are introduc
       transform: rotate(135deg);
       background-color: #5bc236; }
 
+/* Responsive */
+@media all and (min-width: 768px) {
+  #ontrend .header {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%; }
+    #ontrend .header .header-logo svg rect {
+      fill: transparent; }
+    #ontrend .header .header-nav {
+      position: relative;
+      top: 0;
+      z-index: 10;
+      width: auto;
+      height: auto;
+      background-color: #F8971D;
+      text-align: center; } }
 /* 3. Header navigation */
 #ontrend .header .header-nav {
   position: absolute;
@@ -879,6 +903,9 @@ After that as width grows and changes need to happen, media queries are introduc
 #ontrend .header .header-nav #menu-main {
   margin-top: 2em;
   opacity: 0; }
+  @media all and (max-width: 768px) {
+    #ontrend .header .header-nav #menu-main li {
+      float: none; } }
   #ontrend .header .header-nav #menu-main li a {
     padding: 30px 20px;
     text-transform: uppercase;
@@ -886,6 +913,23 @@ After that as width grows and changes need to happen, media queries are introduc
     #ontrend .header .header-nav #menu-main li a:hover {
       color: #F8971D; }
 
+/* Responsive */
+@media all and (min-width: 768px) {
+  #ontrend .header .header-nav {
+    position: relative;
+    top: 0 !important;
+    z-index: 10;
+    width: auto;
+    height: auto;
+    background: none;
+    text-align: center; }
+    #ontrend .header .header-nav #menu-main {
+      opacity: 1 !important;
+      visibility: visible !important;
+      margin-top: 15px; }
+      #ontrend .header .header-nav #menu-main li a {
+        font-size: 1em;
+        padding: 15px; } }
 /* 4. Home page */
 .home-page .home-hero {
   position: relative;
@@ -933,5 +977,12 @@ After that as width grows and changes need to happen, media queries are introduc
     background: #000000;
     color: #FFFFFF;
     padding: 5px; }
+
+/* Responsive */
+@media all and (min-width: 768px) {
+  .footer {
+    margin-bottom: 0; }
+    .footer #inner-footer .footer-nav {
+      position: relative; } }
 
 /*# sourceMappingURL=ontrend.css.map */

@@ -58,40 +58,45 @@
 
 				<div id="inner-header" class="wrap cf">
 
-					<!-- Left column Hamburger nav -->
-					<button class="header-two-column hamburger hamburger--stand" type="button">
-					  <span class="hamburger-box">
-					    <span class="hamburger-inner"></span>
-					  </span>
-					  <div class="hamburger-extra"></div>
-					</button>
+					<!-- wrap for flexbox alignment -->
+					<div class="header-container">
+						<!-- Left column Hamburger nav -->
+						<button class="mobile-only header-two-column hamburger hamburger--stand" type="button">
+						  <span class="hamburger-box">
+						    <span class="hamburger-inner"></span>
+						  </span>
+						  <div class="hamburger-extra"></div>
+						</button>
 
-					<!-- Center column Logo -->
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<a class="header-eight-column header-logo" href="<?php echo home_url(); ?>" rel="nofollow">
-						<?php get_template_part('svg/inline', 'logo-large.svg'); ?>
-					</a>
+						<!-- Center column Logo -->
+						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+						<a class="header-eight-column header-logo" href="<?php echo home_url(); ?>" rel="nofollow">
+							<?php get_template_part('svg/inline', 'logo-large.svg'); ?>
+						</a>
 
-					<!-- Right column Phone icon -->
-					<a class="header-two-column header-phone" href="javascript:void(0)"><i class="fa fa-phone"></i></a>
+						<!-- Nav hidden on mobile -->
+						<nav class="header-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							<?php wp_nav_menu(array(
+	    					         'container' => false,                           // remove nav container
+	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+	    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+	    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+	    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+	    					         'before' => '',                                 // before the menu
+	        			               'after' => '',                                  // after the menu
+	        			               'link_before' => '',                            // before each link
+	        			               'link_after' => '',                             // after each link
+	        			               'depth' => 0,                                   // limit the depth of the nav
+	    					         'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
+						</nav>
+						
+						<!-- Right column Phone icon -->
+						<a class="header-two-column header-phone" href="javascript:void(0)"><i class="fa fa-phone"></i></a>
 
+					</div>
 
-					<nav class="header-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-
-					</nav>
+					
 
 
 				</div>
